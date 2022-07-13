@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "198103196362",
+    "project_id": "moi-record",
+    "storage_bucket": "moi-record.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198103196362:android:498fedc0b7efcdf02f0a33",
+        "android_client_info": {
+          "package_name": "com.example.untitled1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198103196362-7ku1pt090d5sofl8eu7k7nict7j5nna5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.untitled1",
+            "certificate_hash": "7672db63cc1f78b369cd5ac7b98f6c52b682c9a7"
+          }
+        },
+        {
+          "client_id": "198103196362-gk71bac6ao79ubk0t6ddammkjj505kqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4OzOjFRQqf6YUWqVQy170GGxXgtM4D_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198103196362-gk71bac6ao79ubk0t6ddammkjj505kqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
