@@ -2,7 +2,7 @@ import 'package:provider/provider.dart';
 import 'package:untitled1/components/Icons.dart';
 import 'package:untitled1/data/terms.dart';
 import 'package:flutter/material.dart';
-import 'styles.dart';
+import 'package:untitled1/screens/start/styles.dart';
 
 class Setting extends StatefulWidget {
   @override
