@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget arrowIcon() {
   return Image.asset(
-    'assets/images/ic_right_arrow.png',
+    'assets/imgs/ic_right_arrow.png',
     fit: BoxFit.cover,
     height: 24.0,
     width: 24.0,
@@ -11,7 +11,7 @@ Widget arrowIcon() {
 
 Widget modifyIcon() {
   return Image.asset(
-    'assets/images/ic_modify.png',
+    'assets/imgs/ic_modify.png',
     fit: BoxFit.cover,
     height: 24.0,
     width: 24.0,
@@ -20,7 +20,7 @@ Widget modifyIcon() {
 
 Image iconImageSmall(name, size) {
   return Image.asset(
-    'assets/images/ic_' + name + '.png',
+    'assets/imgs/ic_' + name + '.png',
     fit: BoxFit.cover,
     height: size,
     width: size,

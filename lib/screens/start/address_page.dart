@@ -55,7 +55,7 @@ class _AddressPageState extends State<AddressPage> {
                 border: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey)),
                 prefixIconConstraints:
-                    BoxConstraints(minWidth: 24, minHeight: 24)),
+                BoxConstraints(minWidth: 24, minHeight: 24)),
           ),
           TextButton.icon(
             onPressed: () async {
@@ -90,8 +90,8 @@ class _AddressPageState extends State<AddressPage> {
               logger.d(_locationData);
               List<AddressModel2> addresses = await AddressService()
                   .findAddressByCoordinate(
-                      log: _locationData.longitude!,
-                      lat: _locationData.latitude!);
+                  log: _locationData.longitude!,
+                  lat: _locationData.latitude!);
 
               _addressModel2List.addAll(addresses);
 
@@ -101,17 +101,17 @@ class _AddressPageState extends State<AddressPage> {
             },
             icon: _isGettingLocation
                 ? SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: CircularProgressIndicator(
-                      color: Colors.black,
-                    ),
-                  )
+              width: 24,
+              height: 24,
+              child: CircularProgressIndicator(
+                color: Colors.black,
+              ),
+            )
                 : Icon(
-                    CupertinoIcons.compass,
-                    color: Colors.white,
-                    size: 20,
-                  ),
+              CupertinoIcons.compass,
+              color: Colors.white,
+              size: 20,
+            ),
             label: Text(
               _isGettingLocation ? '위치 찾는 중...' : '현재 위치 찾기',
               style: Theme.of(context).textTheme.button,
@@ -148,8 +148,8 @@ class _AddressPageState extends State<AddressPage> {
                   );
                 },
                 itemCount: (_addressModel == null ||
-                        _addressModel!.result == null ||
-                        _addressModel!.result!.items == null)
+                    _addressModel!.result == null ||
+                    _addressModel!.result!.items == null)
                     ? 0
                     : _addressModel!.result!.items!.length,
               ),
@@ -172,7 +172,7 @@ class _AddressPageState extends State<AddressPage> {
                               "0"));
                     },
                     title:
-                        Text(_addressModel2List[index].result![0].text ?? ""),
+                    Text(_addressModel2List[index].result![0].text ?? ""),
                     subtitle: Text(
                         _addressModel2List[index].result![0].zipcode ?? ""),
                   );
@@ -188,7 +188,7 @@ class _AddressPageState extends State<AddressPage> {
   _saveAddressAndGoToNextPage(String address, num lat, num lon) async {
     await _saveAddressOnSharedPreference(address, lat, lon);
 
-    context.read<PageController>().animateToPage(2,
+    context.read<PageController>().animateToPage(3, //2에서 3으로 수정
         duration: Duration(milliseconds: 500), curve: Curves.ease);
   }
 
