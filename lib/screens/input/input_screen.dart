@@ -165,17 +165,7 @@ class _InputScreenState extends State<InputScreen> {
                 ),
                 _divider,
                 // 두 번째
-                ListTile(
-                  onTap: () {
-                    context.beamToNamed(
-                        '/$LOCATION_INPUT/$LOCATION_CATEGORY_INPUT');
-                  },
-                  dense: true,
-                  title: Text(
-                      context.watch<CategoryNotifier>().currentCategoryInKor),
-                  trailing: Icon(Icons.navigate_next),
-                ),
-                _divider,
+
                 Row(
                   children: [
                     Expanded(

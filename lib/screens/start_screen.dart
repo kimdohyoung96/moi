@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:untitled1/screens/start/address_page.dart';
 import 'package:untitled1/screens/start/auth_page.dart';
 import 'package:untitled1/screens/start/intro_page.dart';
+import 'package:untitled1/screens/start/setting.dart';
 
 class StartScreen extends StatelessWidget {
   StartScreen({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class StartScreen extends StatelessWidget {
       child: Scaffold(
         body: PageView(controller: _pageController,
             // physics: NeverScrollableScrollPhysics(),
-            children: [IntroPage(_pageController), AddressPage(), AuthPage()]),
+            children: [IntroPage(_pageController), Setting(), AddressPage(), AuthPage()]),
       ),
     );
   }
