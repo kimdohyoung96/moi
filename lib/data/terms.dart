@@ -15,7 +15,7 @@ class TermsPage extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(children: <Widget>[
               Image.asset(
-                'assets/imgs/terms_' + type + '.jpg',
+                'assets/imgs/terms_' + type + '.png',
               )
             ])));
   }
