@@ -21,6 +21,9 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+// 키없는 번전 1.0
+// 키 유무빼고, google play 서명빼고 kimdo와 동일
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
