@@ -1,12 +1,12 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
-import 'package:latlng/latlng.dart';
-import 'package:map/map.dart';
 import 'package:untitled1/data/item_model.dart';
 import 'package:untitled1/data/user_model.dart';
 import 'package:untitled1/repo/item_service.dart';
 import 'package:beamer/beamer.dart';
 import 'package:untitled1/router/locations.dart';
+import 'package:latlng/latlng.dart';
+import 'package:map/map.dart';
 
 class MapPage extends StatefulWidget {
   // 사용자위치 가져오기
@@ -83,19 +83,19 @@ class _MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return MapLayoutBuilder(
       builder: (BuildContext context, MapTransformer transformer) {
-        final myLocationOnMap = transformer.fromLatLngToXYCoords(LatLng(
+        final myLocationOnMap = transformer.toOffset(LatLng(
             widget._userModel.geoFirePoint.latitude,
             widget._userModel.geoFirePoint.longitude));
 
         // 현위치 색상 표시
         final myLocationWidget =
-            _buildMarkerWidget(myLocationOnMap, color: Colors.red);
+        _buildMarkerWidget(myLocationOnMap, color: Colors.red);
 
         Size size = MediaQuery.of(context).size;
         final middleOnScreen = Offset(size.width / 2, size.height / 2);
 
         // 맵 위치 변하기
-        final latLngOnMap = transformer.fromXYCoordsToLatLng(middleOnScreen);
+        final latLngOnMap = transformer.toLatLng(middleOnScreen);
         print("${latLngOnMap.latitude}, ${latLngOnMap.longitude}");
 
         return FutureBuilder<List<ItemModel>>(
@@ -106,7 +106,7 @@ class _MapPageState extends State<MapPage> {
 
               if (snapshot.hasData) {
                 snapshot.data!.forEach((item) {
-                  final offset = transformer.fromLatLngToXYCoords(LatLng(
+                  final offset = transformer.toOffset(LatLng(
                       item.geoFirePoint.latitude, item.geoFirePoint.longitude));
                   nearByItems.add(_buildItemWidget(offset, item));
                 });

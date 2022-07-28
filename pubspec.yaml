@@ -47,6 +47,7 @@ dependencies:
   map: ^1.0.0
   latlng: ^0.1.0
   algolia: ^1.0.4
+  filter_list: ^1.0.2
 
 dev_dependencies:
   flutter_test:
