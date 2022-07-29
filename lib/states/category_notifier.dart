@@ -28,6 +28,7 @@ class CategoryNotifier extends ChangeNotifier {
 }
 
 const Map<String, String> categoriesMapEngToKor = {
+  // 선택부분 kimdo에 맞게 수정해야 됨
   'none': '선택',
   'light': '가벼운 물건(~3kg)',
   'middle': '적당한 물건(3kg~7kg)',
